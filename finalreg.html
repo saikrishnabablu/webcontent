@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>finalreg</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <script>
+    function registration()
+	{
+
+		var name= document.getElementById("t1").value;
+		var email= document.getElementById("t2").value;
+		var uname= document.getElementById("t3").value;
+		var pwd= document.getElementById("t4").value;			
+		var cpwd= document.getElementById("t5").value;
+		
+        //email id expression code
+		var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+		var letters = /^[A-Za-z]+$/;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(name=='')
+		{
+			alert('Please enter your name');
+			return false;
+		}
+		else if(!letters.test(name))
+		{
+			alert('Name field required only alphabet characters');
+			return false;
+		}
+		else if(email=='')
+		{
+			alert('Please enter your user email id');
+			return false;
+		}
+		else if (!filter.test(email))
+		{
+			alert('Invalid email');
+			return false;
+		}
+		else if(uname=='')
+		{
+			alert('Please enter the user name.');
+			return false;
+		}
+		else if(!letters.test(uname))
+		{
+			alert('User name field required only alphabet characters');
+			return false;
+		}
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+			return false;
+		}
+		else if(cpwd=='')
+		{
+			alert('Enter Confirm Password');
+			return false;
+		}
+		else if(!pwd_expression.test(pwd))
+		{
+			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+			return false;
+		}
+		else if(pwd != cpwd)
+		{
+			alert ('Password not Matched');
+			return false;
+		}
+		else if(document.getElementById("t5").value.length < 6)
+		{
+			alert ('Password minimum length is 6');
+			return false;
+		}
+		else if(document.getElementById("t5").value.length > 12)
+		{
+			alert ('Password max length is 12');
+			return false;
+		}
+		else
+		{				                            
+             return true;
+		}
+	}
+</script>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    
+                    <i class="text-body px-3">  <b class="fa fa-map mr-2">  </b>24/7 SERVICE</i>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-body pl-3" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-uppercase text-primary mb-1">AMIGO-ASSIST</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="finallogin.html" class="nav-item nav-link">login</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">REGISTER</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a class="text-white" href="">Home</a></h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0">REGISTER</h6>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+    
+
+    
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="bg-banner py-5 px-4 text-center">
+              
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<form id='f1' method='POST' action='customerreg'>
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right" style="color:orange">ENTER NAME :</td>
+	<td><input type="text" placeholder="Enter user" id="t1" class="tb"  name='name'/></td>
+	</tr>
+	<tr>
+	<td align="right" style="color:orange">ENTER EMAIL ID :</td>
+	<td><input type="text" placeholder="Enter Email ID " id="t2" class="tb" name='emailid' /></td>
+	</tr>
+	<tr>
+	<td align="right" style="color:orange">ENTER USERNAME :</td>
+	<td><input type="text" placeholder="Enter Username " id="t3" class="tb"  name='username'/></td>
+	</tr>
+	<tr>
+	<td align="right" style="color:orange">PASSWORD :</td>
+	<td><input type="password" placeholder="Enter Password" id="t4" class="tb" name='password' /></td>
+	</tr>
+	<tr>
+	<td align="right" style="color:orange">CONFIRM PASSWORD :</td>
+	<td><input type="password" placeholder="Enter Password" id="t5" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>
+		 <a href="finallogin.html" class="btn btn-primary py-md-3 px-md-5 mt-2">LOGIN</a>
+	<td>
+	    	<input type="submit" value="REGISTER" class="btn btn-primary py-md-3 px-md-5 mt-2" onClick="return registration()" /></td>
+	</td>
+	</tr>
+	</table>
+	
+	</form>
+		</div>
+	<!-- create account box ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+	 
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            
+            
+            
+            
+    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+        <p class="mb-2 text-center text-body">&copy; <a href="#">AMIGO-ASSIST</a>. All Rights Reserved.</p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+.button{
+background-color: tomato;
+border: none;
+padding: 15px 60px;
+margin: 6px 30px;
+}
+function validate(){
+  var Nameofthecompany=document.getElementById("cname").value;
+  var ContactNumber=document.getElementById("cno").value;
+  var companyownername=document.getElementById("cowner"),value;
+  var localityofthecompany=document.getElementById("loc");
+}
+
+</style>
+</head>
+<body>
+<h1 >Become a Partner of <b style="color:dodgerblue;">  AMIGO-ASSIST</b></h1>
+<form id="f1" name="f1" action="customerreg" method="POST">
+<p>Name Of The Company:<sup>*</sup></p>
+<input size="60"type="text" id="cname" name="cname"/>
+<br>
+<p >Contact Number:<sup>*</sup></p>
+  <input size="60" type="text" id="cno" name="cno"/>
+<br>
+<p>Company Owner Name<sup>*</sup></p>
+<input size="60" type="text" id="cowner" name="cowner"/>
+<br>
+<p>Locality Of The Company:</p>
+<textarea id="loc" rows="5" cols="55" name="loc" id="loc">
+</textarea>
+<br><br>
+<input type="submit" class="button" value="REGISTER AS PARTNER" />
+</body>
+</html>
